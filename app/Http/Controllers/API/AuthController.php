@@ -70,7 +70,7 @@ class AuthController extends Controller
         $UserData = Users::with('profile', 'role')->where('email', $request->input('email'))->first();
 
         return response([
-            "message" => "Berhasil login",
+            "message" => "Berhasil Login",
             "user" => $UserData,
             "token" => $token
         ], 200);
